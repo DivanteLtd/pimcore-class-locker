@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    Divante\ClassLockerBundle\EventListener\ClassListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.class.preUpdate, method: onPreUpdate }
+
+    Divante\ClassLockerBundle\Service\ClassLockerService: ~
