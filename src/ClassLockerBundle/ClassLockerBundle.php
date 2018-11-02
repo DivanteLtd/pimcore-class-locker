@@ -1,6 +1,6 @@
 <?php
 /**
- * @category    Wurth
+ * @category    ClassLocker
  * @date        22/10/2017 10:39
  * @author      Jakub Płaskonka <jplaskonka@divante.pl>
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
@@ -42,4 +42,6 @@ class ClassLockerBundle extends AbstractPimcoreBundle
     {
         return "2.0.0";
     }
+
+
 }
