@@ -6,7 +6,7 @@
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
  */
 
-namespace Divante\ClassLockerBundle\DependencyInjection;
+namespace ClassLockerBundle\DependencyInjection;
 
 use Divante\ClassLockerBundle\EventListener\ClassListener;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class DivanteClassLockerExtension extends Extension
+class ClassLockerExtension extends Extension
 {
     /**
      * {@inheritdoc}

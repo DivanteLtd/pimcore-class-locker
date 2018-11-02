@@ -6,15 +6,15 @@
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
  */
 
-namespace Divante\ClassLockerBundle;
+namespace ClassLockerBundle;
 
 use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 
 /**
- * Class DivanteClassLockerBundle
- * @package Divante\ClassLockerBundle
+ * Class ClassLockerBundle
+ * @package ClassLockerBundle
  */
-class DivanteClassLockerBundle extends AbstractPimcoreBundle
+class ClassLockerBundle extends AbstractPimcoreBundle
 {
 
     /**
@@ -23,7 +23,7 @@ class DivanteClassLockerBundle extends AbstractPimcoreBundle
     public function getJsPaths()
     {
         return [
-            '/bundles/divanteclasslocker/js/pimcore/startup.js',
+            '/bundles/classlocker/js/pimcore/startup.js',
         ];
     }
 

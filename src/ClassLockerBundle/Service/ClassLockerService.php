@@ -6,7 +6,7 @@
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
  */
 
-namespace Divante\ClassLockerBundle\Service;
+namespace ClassLockerBundle\Service;
 
 use Pimcore\Cache\Runtime;
 use Pimcore\Model\DataObject\ClassDefinition;

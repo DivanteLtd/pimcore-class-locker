@@ -6,7 +6,7 @@
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
  */
 
-namespace Divante\ClassLockerBundle\DependencyInjection;
+namespace ClassLockerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -23,17 +23,17 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('divante_class_locker');
+        $rootNode    = $treeBuilder->root('class_locker');
 
         $rootNode
             ->children()
-            ->arrayNode('classes')
-            ->useAttributeAsKey('name')
-            ->prototype('array')
-            ->scalarPrototype()->end()
-            ->end()
-            ->end()
-            ->end()
+                ->arrayNode('classes')
+                    ->useAttributeAsKey('name')
+                        ->prototype('array')
+                            ->scalarPrototype()->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;

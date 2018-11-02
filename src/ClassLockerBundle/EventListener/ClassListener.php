@@ -6,7 +6,7 @@
  * @copyright   Copyright (c) 2017 Divante Ltd. (https://divante.co)
  */
 
-namespace Divante\ClassLockerBundle\EventListener;
+namespace ClassLockerBundle\EventListener;
 
 use Divante\ClassLockerBundle\Service\ClassLockerService;
 use Pimcore\Event\Model\DataObject\ClassDefinitionEvent;
