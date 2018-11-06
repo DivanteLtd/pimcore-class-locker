@@ -1,0 +1,44 @@
+{
+  "name": "divanteltd/pimcore-class-locker",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0-or-later",
+  "description": "Divante Class Locker bundle was created to block modifications on attributes in classes.",
+  "keywords": [
+    "pimcore",
+    "pimcore-bundle"
+  ],
+  "homepage": "https://www.divante.co",
+  "authors": [
+    {
+      "name": "Michał Bolka",
+      "email": "mbolka@divante.pl",
+      "role": "Developer"
+    },
+    {
+      "name": "Jakub Płaskonka",
+      "email": "jplaskonka@divante.pl",
+      "role": "Developer"
+    },
+    {
+      "name": "Agata Drozdek",
+      "email": "adrozdek@divante.pl",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "pimcore/pimcore": ">=5.2",
+    "pitpit/php-diff": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "ClassLockerBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "ClassLockerBundle\\ClassLockerBundle"
+      ]
+    }
+  }
+}
