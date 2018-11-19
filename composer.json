@@ -23,6 +23,11 @@
       "name": "Agata Drozdek",
       "email": "adrozdek@divante.pl",
       "role": "Developer"
+    },
+    {
+      "name": "Korneliusz Kirsz",
+      "email": "kkirsz@divante.co",
+      "role": "Developer"
     }
   ],
   "require": {

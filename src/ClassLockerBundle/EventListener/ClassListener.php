@@ -9,6 +9,7 @@
 namespace ClassLockerBundle\EventListener;
 
 use ClassLockerBundle\Service\ClassLockerService;
+use ClassLockerBundle\Service\ConfigService;
 use Pimcore\Event\Model\DataObject\ClassDefinitionEvent;
 use Pimcore\Model\DataObject\ClassDefinition;
 
@@ -18,7 +19,9 @@ use Pimcore\Model\DataObject\ClassDefinition;
  */
 class ClassListener
 {
-    /** @var ClassLockerService */
+    /**
+     * @var ClassLockerService
+     */
     protected $lockerService;
 
     /**
@@ -29,12 +32,12 @@ class ClassListener
     /**
      * ClassListener constructor.
      * @param ClassLockerService $lockerService
-     * @param array              $lockedClasses
+     * @param ConfigService $configService
      */
-    public function __construct(ClassLockerService $lockerService, array $lockedClasses)
+    public function __construct(ClassLockerService $lockerService, ConfigService $configService)
     {
         $this->lockerService = $lockerService;
-        $this->lockedClasses = $lockedClasses;
+        $this->lockedClasses = $configService->getLockedClasses();
     }
 
     /**

@@ -8,6 +8,7 @@
 
 namespace ClassLockerBundle;
 
+use Pimcore\Extension\Bundle\Traits\PackageVersionTrait;
 use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 
 /**
@@ -16,15 +17,16 @@ use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
  */
 class ClassLockerBundle extends AbstractPimcoreBundle
 {
+    const CONFIG_DIR = PIMCORE_CUSTOM_CONFIGURATION_DIRECTORY . '/classlocker';
+
+    use PackageVersionTrait;
 
     /**
-     * @return array
+     * @return string
      */
-    public function getJsPaths()
+    public function getComposerPackageName(): string
     {
-        return [
-            '/bundles/classlocker/js/pimcore/startup.js',
-        ];
+        return 'divanteltd/pimcore-class-locker';
     }
 
     /**
@@ -36,12 +38,20 @@ class ClassLockerBundle extends AbstractPimcoreBundle
     }
 
     /**
-     * @inheritdoc
+     * @return Installer
      */
-    public function getVersion()
+    public function getInstaller()
     {
-        return "2.0.0";
+        return $this->container->get(Installer::class);
     }
 
-
+    /**
+     * @return array
+     */
+    public function getJsPaths()
+    {
+        return [
+            '/bundles/classlocker/js/pimcore/startup.js',
+        ];
+    }
 }
