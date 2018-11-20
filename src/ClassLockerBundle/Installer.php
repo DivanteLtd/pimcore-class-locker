@@ -24,11 +24,11 @@ class Installer extends MigrationInstaller
      */
     public function migrateInstall(Schema $schema, Version $version)
     {
-        $dir = ClassLockerBundle::CONFIG_DIR;
+        $dir = dirname(ClassLockerBundle::CONFIG_FILE);
 
         if (!file_exists($dir)) {
             \Pimcore\File::mkdir($dir);
-            copy(__DIR__ . '/Resources/install/config.php', $dir . '/config.php');
+            copy(__DIR__ . '/Resources/install/config.php', ClassLockerBundle::CONFIG_FILE);
         }
     }
 

@@ -27,13 +27,14 @@ class ConfigService
     public function getLockedClasses(): array
     {
         if ($this->config === null) {
-            $file = ClassLockerBundle::CONFIG_DIR . '/config.php';
-
-            if (!file_exists($file)) {
-                throw new \UnexpectedValueException(sprintf('%s doesn\'t exist', $file));
+            if (!file_exists(ClassLockerBundle::CONFIG_FILE)) {
+                throw new \UnexpectedValueException(sprintf(
+                    '%s doesn\'t exist',
+                    ClassLockerBundle::CONFIG_FILE
+                ));
             }
 
-            $this->config = include $file;
+            $this->config = include ClassLockerBundle::CONFIG_FILE;
         }
 
         return $this->config;

@@ -17,7 +17,7 @@ use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
  */
 class ClassLockerBundle extends AbstractPimcoreBundle
 {
-    const CONFIG_DIR = PIMCORE_CUSTOM_CONFIGURATION_DIRECTORY . '/classlocker';
+    const CONFIG_FILE = PIMCORE_CUSTOM_CONFIGURATION_DIRECTORY . '/classlocker/config.php';
 
     use PackageVersionTrait;
 
