@@ -20,17 +20,20 @@ The goal of this module is:
 ```bash
 composer require divanteltd/pimcore-class-locker
 ```
-In Pimcore panel select Extensions and click Enable.
+In Pimcore panel select Extensions and click Enable/Install.
 
-Define which attributes cannot be changed in which class in your bundle's config.yml:
-```yaml
-class_locker:
-    classes:
-        class_name1:
-          - attribute1
-          - attribute2
-
-        class_name2: [attribute1, attribute2]
+Define which attributes cannot be changed in which class in app/config/pimcore/classlocker/config.php:
+```php
+return [
+    'class_name1' => [
+        'attribute11',
+        'attribute12',
+    ],
+    'class_name2' => [
+        'attribute21',
+        'attribute22',    
+    ],    
+];
 ```
 
 ## Contributing

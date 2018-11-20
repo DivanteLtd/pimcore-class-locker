@@ -9,3 +9,9 @@ services:
             - { name: kernel.event_listener, event: pimcore.class.preUpdate, method: onPreUpdate }
 
     ClassLockerBundle\Service\ClassLockerService: ~
+    ClassLockerBundle\Service\ConfigService: ~
+
+    ClassLockerBundle\Installer:
+        public: true
+        arguments:
+            $bundle: "@=service('kernel').getBundle('ClassLockerBundle')"
