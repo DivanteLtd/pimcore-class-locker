@@ -1,7 +1,10 @@
 DivanteClassLocker
 ====================
-Divante Class Locker bundle was created to block modifications on attributes in classes.
-1
+Divante Class Locker bundle was created to block modifications on attributes in classes. You can define which attributes are disabled for modification (even for admin users).
+
+## Yaml version
+For version using yaml based configuration, see branch config-in-yaml.
+
 ## Compatibility
 This module is compatible with Pimcore >= 5.2
  
